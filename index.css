@@ -1,0 +1,74 @@
+:root{
+    --battleship-gray: hsl(0, 0%, 53%);
+    --viridian-green: hsl(180, 98%, 31%);
+    --silver-chalice: hsl(0, 0%, 69%);
+    --independence: hsl(219, 20%, 32%);
+    --oxford-blue: hsl(222, 46%, 17%);
+}
+
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--battleship-gray);
+    color: var( --silver-chalice);
+    font-family:Cambria, Georgia, Times, 'Times New Roman', serif;
+}
+
+.container{
+    background: var( --oxford-blue);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    height: 200px;
+    margin: 14rem auto;
+    padding: 4rem 2rem;    
+    border: 3px ridge var(--silver-chalice);
+    border-radius: 20px;
+  
+}
+
+.time{
+    font-size: 4.5rem;
+    font-weight: 500;
+    margin-bottom:20px;
+
+}
+
+.ctrl{
+   display: flex;
+   justify-content:center;
+   align-items:center;
+   gap: 24px;
+   font-family:'Times New Roman', Times, serif;
+
+}
+
+.ctrl button{
+    appearance: none;
+    border: none;
+    outline: none;
+    user-select: none;
+    cursor: pointer;
+    background: var(--independence);
+    color: var(--silver-chalice);
+    font-size: 12px;
+    padding: 8px 16px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+
+.ctrl button:is(:hover,:focus){
+    opacity: 0.5; 
+}
+
+.ctrl button:active{
+    background: var( --battleship-gray);
+}
